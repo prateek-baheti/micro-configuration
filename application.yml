@@ -1,4 +1,14 @@
 spring:
   application:
-    name:
+    name: Config-Default
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registery: true   #This setting indicates that the Eureka client should fetch the service registry from the Eureka server. This is essential for a service to discover other services registered with Eureka.
+    register-with-eureka: true   #This setting indicates that the service should register itself with the Eureka server. When set to true, the service will be listed in the Eureka registry
+    service-url:
+      defaultZone: http://localhost:8761/eureka     #Configuration for the URLs of the Eureka server.This specifies the URL of the Eureka server where the service will register itself and from where it will fetch the service registry.
+
+
     
